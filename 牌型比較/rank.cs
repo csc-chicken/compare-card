@@ -3,8 +3,8 @@ namespace Cardgame
 {
 	public enum Rank
 	{
-		Ace = 1,
-		Deuce,
+		
+		Deuce=2,
 		Three,
 		Four,
 		Five,
@@ -15,6 +15,7 @@ namespace Cardgame
 		Ten,
 		Jack,
 		Queen,
-		King
+		King,
+		Ace,
 	}
 }

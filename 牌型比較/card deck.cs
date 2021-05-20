@@ -30,6 +30,7 @@ namespace Cardgame
 		private static int cardnow = 0;
 		public Deck()
 		{
+			cardnow = 0;
 			cards = new Card[52];
 			for (int i = 0; i < 4; i++)
 			{
