@@ -7,6 +7,8 @@ namespace Cardgame
     class Person
     {
         public List<Card> handcard = new List<Card>();
+        public int bigcard;
+        public Status status = new Status();
 
     }
     class Program
@@ -32,6 +34,9 @@ namespace Cardgame
                 {
                     Console.WriteLine("{0} {1}", i.suit, i.rank);
                 }
+                
+                
+                
                 Cardtype cardtype = new Cardtype();
                 cardtype.cardChecked(p1);
 
