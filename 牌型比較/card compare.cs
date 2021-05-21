@@ -83,11 +83,13 @@ namespace Cardgame
 				mycard.bigcard = cardrank[cardrank.Length - 1];
 
 			}
-			else if (Array.Exists(thisrank, element => element == 4)){
+			else if (rankcounter[2] == 1){
 				mycard.status = Status.TIGI;
             }
-			else if(Array.Exists(thisrank, element => element == 3)){
-				if(Array.Exists(thisrank, element => element == 2)){
+			else if(rankcounter[1] == 1)
+			{
+				if(rankcounter[0] == 1)
+				{
 					mycard.status = Status.HULU;
                 }
                 else
@@ -95,26 +97,32 @@ namespace Cardgame
 					mycard.status = Status.THREE;
                 }
 			}
-			else if (Array.Exists(thisrank,element=>element ==2))
+			else if (rankcounter[0] == 2)
             {
-
+				mycard.status = Status.TWOTWO;
 			}
-            else
+			else if (rankcounter[0] == 1)
+			{
+				mycard.status = Status.TWO;
+			}
+			else
             {
 				mycard.status = Status.ONE;
-            }
+				mycard.bigcard = cardrank[cardrank.Length-1];
+			}
 			Console.WriteLine("你拿到 {0}", mycard.status);
-			
-			//mycard.handcard[0].rank;
-		/*	Console.WriteLine("有沒有順子? :   {0}",flushCheck(mycard));
+			Console.WriteLine("最大張為 {0}", mycard.bigcard);
 
-			Console.WriteLine("有沒有同花? :   {0}",classifySuit(mycard));
-			Console.WriteLine("有沒有鐵支? :   {0}", Array.Exists(classifyRank(mycard), element => element == 4));
-			Console.WriteLine("有沒有葫蘆? :   {0}", Array.Exists(classifyRank(mycard), element => element == 3)&&
-													 Array.Exists(classifyRank(mycard), element => element == 2));
-			Console.WriteLine("有沒有三條? :   {0}", Array.Exists(classifyRank(mycard), element => element == 3) &&
-													 !Array.Exists(classifyRank(mycard), element => element == 2));
-		*/
+			//mycard.handcard[0].rank;
+			/*	Console.WriteLine("有沒有順子? :   {0}",flushCheck(mycard));
+
+				Console.WriteLine("有沒有同花? :   {0}",classifySuit(mycard));
+				Console.WriteLine("有沒有鐵支? :   {0}", Array.Exists(classifyRank(mycard), element => element == 4));
+				Console.WriteLine("有沒有葫蘆? :   {0}", Array.Exists(classifyRank(mycard), element => element == 3)&&
+														 Array.Exists(classifyRank(mycard), element => element == 2));
+				Console.WriteLine("有沒有三條? :   {0}", Array.Exists(classifyRank(mycard), element => element == 3) &&
+														 !Array.Exists(classifyRank(mycard), element => element == 2));
+			*/
 			/*foreach (var i in mycard.handcard)
 			{
 				Console.WriteLine("{0} {1}", i.suit, i.rank);

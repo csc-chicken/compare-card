@@ -51,6 +51,7 @@ namespace Cardgame
                 // Cardtype cardtype = new Cardtype();
                 // cardtype.cardChecked(mycard);
                 //mydeck.getcard();
+               // if(p1.status==Status.RFLUSH)
                 Console.ReadLine();
             }
             
